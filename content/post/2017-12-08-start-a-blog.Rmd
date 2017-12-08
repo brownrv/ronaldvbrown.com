@@ -32,7 +32,7 @@ In RStudio:
 install.packages("blogdown")
 ```
 
-Next I installed Hugo <https://gohugo.io> which is a static site generator.
+Next I installed [Hugo](https://gohugo.io) which is a static site generator.
 ```{}
 library(blogdown)
 blogdown::install_hugo()
@@ -77,17 +77,12 @@ Initially you get a funny-looking url but you can easily change this under Site 
 
 ### Customer Domains: 
 
-I decided to go with a custom domain. In Netlify, also under Site Settings is a section for Domain Management where you can set the custom domain. I followed the [Using a customer domain](https://www.netlify.com/docs/custom-domains/) documentation to set DNS settings correctly.
+I decided to go with a custom domain. In Netlify, also under Site Settings is a section for Domain Management where you can set the custom domain. I followed the [Using a custom domain](https://www.netlify.com/docs/custom-domains/) documentation to set DNS settings correctly.
 
 
 ## Customizing my new site: 
 
 At this point there really wasn't much of a site.  I started following the [User Documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md) for the tranquilpeak theme.
-
-
-### config.toml: 
-
-
 
 
 ## Conclusion: 
