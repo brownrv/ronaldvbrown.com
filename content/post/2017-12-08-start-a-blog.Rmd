@@ -1,0 +1,97 @@
+---
+title: Start A Blog
+author: Ron Brown
+date: '2017-12-08'
+slug: start-a-blog
+categories:
+  - how to
+tags:
+  - r
+  - blogdown
+  - github
+  - hugo
+  - netlify
+---
+
+## Introduction
+
+I read [R-bloggers](https://www.r-bloggers.com/) newsletter almost everyday. Although I enjoy reading other peoples' blogs and seeing the cool things they do, I hadn't really considered creating my own until I came across a post by David Robinson: [Advice to aspiring data scientists: start a blog](http://varianceexplained.org/r/start-blog/). This inspired me to set up my own blog. The following describes how I set up this site.
+
+## Getting Started
+
+All I knew at first was that I wanted create my posts using R Markdown files.
+
+As with most things I don't know how to do, I went to Google.  A quick search for "how to setup an R blog" led me almost immediately to a December 2016 post by Dr. Shirin Glander's: [How to set up your own R blog with Github pages and Jekyll Bootstrap](https://shiring.github.io/blogging/2016/12/04/diy_your_own_blog).  I read through this article and some others on her site.  I came across a newer post from September 2017: [Moving my blog to blogdown](https://shiring.github.io/blogdown/2017/09/14/moving-my-blog-to-blogdown) (she also acquired her own domain name <https://www.shirin-glander.de/>.  This was my starting point. I was going to use the R blogdown package in combination with Hugo and Netlify.
+
+Like Shirin, I followed the [blogdown ebook](https://bookdown.org/yihui/blogdown/) to setup my blog.  It wasn't as straight forward as I though and that's why I chose to make my first post about my setup.
+
+## Installation
+
+I read through most of the blogdown ebook before I did anything just to get an idea of the steps I would need to take. I turned back to section 1.1 Installation to get started. I already had R and RStudio installed but I did not yet have the blogdown package so I installed it as well.
+
+In RStudio:
+```{}
+install.packages("blogdown")
+```
+
+Next I installed Hugo <https://gohugo.io> which is a static site generator.
+```{}
+library(blogdown)
+blogdown::install_hugo()
+```
+
+Knowing the version of Hugo installed will be important later.  You can check the version via:
+```{r}
+blogdown::hugo_version()
+```
+
+
+### Github
+
+At this point I created a new repository on Github. In RStudio, I created a new project using Version Control (Git) and filled in the repository URL.  I opened GitHub Desktop and added the repository from local path.  The last step here was to click Publish.
+
+
+### Build the new site
+
+I did all this a couple times actually mostly just to try out different themes. I eventually settled on Thibaud Leprêtre’s [tranquilpeak theme](https://themes.gohugo.io/hugo-tranquilpeak-theme/). 
+
+Back to RStudio. The next step was to build the new site with the chosen theme. Here is the code I used to build the new site with this theme:
+
+```{}
+blogdown::new_site(sample = FALSE, theme = "kakawait/hugo-tranquilpeak-theme", theme_example = FALSE)
+```
+
+I wanted to start with a clean slate so I chose not to install sample data or a theme_example. I committed the changes to Github and checked to make sure the new files were there.
+
+
+### Netlify
+
+Connecting the new site (Github repository) to Netlify was the next step. Because I wanted to start with no sample data, the content folder was empty to begin with. I found that my initial commit did not bring over the content directory.  This caused an error when I attempted to deploy the new site on Netlify. To solve this I just added a .gitkeep file in the content directory and committed that change.
+
+```{}
+file.create("content/.gitkeep")
+```
+
+At [Netlify](https://www.netlify.com/), I logged in with my Github account. I clicked on "New site from Git." to get started. Here I just followed the instructions from section 3.1 Netlify in the ebook. I selected the correct repository from Github and added "hugo" as the Build Command and "public" as the Publish Directory. Finally, I clicked on Advanced settings where I was able to create a new Build Environment Variable. I created "HUGO_VERSION" with the value 0.31.1 (which I found earlier). That's it.  I deployed the new site and it was up and running.
+
+Initially you get a funny-looking url but you can easily change this under Site Settings. Click Change Site Name and choose a better name. I now had a live site accessible via <sitename>.netlify.com. 
+
+
+### Customer Domains
+
+I decided to go with a custom domain. In Netlify, also under Site Settings is a section for Domain Management where you can set the custom domain. I followed the [Using a customer domain](https://www.netlify.com/docs/custom-domains/) documentation to set DNS settings correctly.
+
+
+## Customizing my new site
+
+At this point there really wasn't much of a site.  I started following the [User Documentation](https://github.com/kakawait/hugo-tranquilpeak-theme/blob/master/docs/user.md) for the tranquilpeak theme.
+
+
+### config.toml
+
+
+
+
+## Conclusion
+
+There are many combinations of tools and methods to setup a blog site and for each of those many different ways to get it accomplished. The steps above describe how I did it. It may not be the best way but it works and that's what is important.
