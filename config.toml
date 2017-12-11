@@ -172,7 +172,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   
   
   # Your favicon path, default is "/favicon.png"
-  favicon = "/favicon.png"
+  favicon = "https://photos.app.goo.gl/BEuw4zFjPPb0j9il1"
 
   # Header configuration
   # The link at the right of the header is customizable
@@ -191,7 +191,7 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   # customJS = ["js/foo.js"]
   
   # logo
-  logo = "/favicon.png"
+  logo = "https://photos.app.goo.gl/BEuw4zFjPPb0j9il1"
 
   # Sharing options
   # Comment and uncomment to enable or disable sharing options
