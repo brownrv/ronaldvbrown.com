@@ -13,54 +13,82 @@ tags:
 
 I often refer to RStudio's [R Markdown Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf).
 
+
+# Works As Expected:
+
 Plain text  
 End a line with two spaces to start a new paragraph.  
+
 *italics*
+
 **bold**
-'verbatim code'
-subscript^~2~
-superscript^2
+
+`verbatim code`
+
+subscript~2~
+
+superscript^2^
+
 ~~strikethrough~~
+
 escaped characters: \* \_ \\
+
 endash --
+
 emdash ---
-equation: $A = \pi*r^{2}$
-equation block: $$E = mc^{2}$$
+
 > block quote
+
 # Header1 {#anchor}
+
 ## Header2 {#css_id}
+
 ### Header3 {.css_class}
+
 #### Header4
+
 ##### Header5
+
 ###### Header6
-<!--Text comment-->
-\textbf{Tex ignored in HTML}
-<em>HTML ignored in pdfs</em>
+
 <http://www.rstudio.com>
+
 [link](www.rstudio.com)
+
 Jump to [Header1](#anchor)
+
 image:
 ![Caption](smallorb.png)
 
-* unordered list
-  + sub-item 1
-  + sub-item 2
-    - sub-sub-item 1
+***
 
-* item 2
+* unordered list (end with 2 spaces)  
+    + (begin with 4 spaces) sub-item 1 (end with 2 spaces)  
+    + (begin with 4 spaces) sub-item 2 (end with 2 spaces)  
+        - (begin with 8 spaces) sub-sub-item 1
+
+* item 2 (end with 2 spaces)  
     Continued (indent 4 spaces)
-    
+
+***
+
 1. ordered list
-2. item 2
-  i) sub-item 1
-    A. sub-sub-item 1
-    
-(@) A list whose numbering
+2. item 2 (end with 2 spaces)  
+    i) sub-item 1 (end with 2 spaces)  
+        A. sub-sub-item 1  
+
+***
+
+(@) A list whose numbering (end with 2 spaces)  
 continues after
 (@) an interuption
 
+***
+
 Term 1
 : Definition 1
+
+***
 
 |Right|Left|Default|Center|
 |------:|:-----|---------|:------:|
@@ -68,10 +96,14 @@ Term 1
 | 123 | 123 | 123 | 123 |
 | 1 | 1 | 1 | 1 |
 
+***
+
 - slide bullet 1
 - slide bullet 2
 
 (>- to have bullets appear on click)
+
+***
 
 horizontal rule/slide break:  
 
@@ -80,3 +112,94 @@ horizontal rule/slide break:
 A footnote [^1]
 
 [^1]: Here is the footnote.
+
+***
+
+#### Fold
+From [Boost your productivity using  Markdown.](https://hackernoon.com/boost-your-productivity-using-markdown-b8a84fc2a089)
+
+<details><summary>Boostnote is a notepad corresponding to markdown notation, which is a tool for organizing and sharing information.</summary>
+- Features - <br>
+· Search function to find memos in one shot
+· Supports markdown notation <br>
+· Support for Mac, Windows, Linux, iOS, Android <br>
+· Export and import to Plain text (.txt), Markdown (.md) format <br>
+· Supports PDF saving <br>
+· Can be used offline <br>
+· Synchronize to dropbox etc. with setting <br>
+· Supports theme colors and numerous fonts <br>
+</details>
+
+***
+
+# Does Not Work As Expected:
+
+equation: $A = \pi*r^{2}$
+
+equation block: $$E = mc^{2}$$
+
+<!--Text comment-->
+
+\textbf{Text ignored in HTML}
+
+<em>HTML ignored in pdfs</em>
+
+***
+
+#### Tabset
+Use .tabset css class to place sub-headers into tabs  
+
+# Tabset {.tabset .tabset-fade .tabset-pills}
+
+## Tab 1
+
+text 1
+
+## Tab 2
+
+text 2
+
+### End tabset
+
+***
+
+#### Check Box
+From [Boost your productivity using  Markdown.](https://hackernoon.com/boost-your-productivity-using-markdown-b8a84fc2a089)
+
+- [x] Task 1
+- [ ] Task 2
+
+***
+
+#### Latex
+From [Boost your productivity using  Markdown.](https://hackernoon.com/boost-your-productivity-using-markdown-b8a84fc2a089)
+
+$$$
+\mathrm{e}^{\mathrm{i}\theta} = \cos(\theta) + \mathrm{i}\sin(\theta)
+$$$
+
+***
+
+#### Flowchart
+From [Boost your productivity using  Markdown.](https://hackernoon.com/boost-your-productivity-using-markdown-b8a84fc2a089)
+
+st=>start: Start:>http://www.google.com[blank]  
+e=>end:>http://www.google.com  
+op1=>operation: My Operation  
+sub1=>subroutine: My Subroutine  
+cond=>condition: Yes or No?:>http://www.google.com  
+io=>inputoutput: catch something…  
+st->op1->cond  
+cond(yes)->io->e  
+cond(no)->sub1(right)->op1  
+
+***
+
+#### Sequence
+From [Boost your productivity using  Markdown.](https://hackernoon.com/boost-your-productivity-using-markdown-b8a84fc2a089)
+
+Title: Here is a title  
+A-> B: Normal line  
+B -> C: Dashed line  
+C -> D: Open arrow  
+D -> A: Dashed open arrow  
