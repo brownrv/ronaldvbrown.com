@@ -1,0 +1,88 @@
+---
+title: R Markdown Cheat Sheet
+author: Ron Brown
+date: '2018-01-02'
+slug: r-markdown-cheat-sheet
+categories:
+  - how to
+tags:
+  - r
+  - markdown
+  - cheat sheet
+---
+
+
+
+<p>I often refer to RStudio’s <a href="https://github.com/rstudio/cheatsheets/raw/master/rmarkdown-2.0.pdf">R Markdown Cheat Sheet</a>.</p>
+<p>Plain text<br />
+End a line with two spaces to start a new paragraph.<br />
+<em>italics</em> <strong>bold</strong> ‘verbatim code’ subscript<sup><sub>2</sub> superscript</sup>2 <del>strikethrough</del> escaped characters: * _ \ endash – emdash — equation: <span class="math inline">\(A = \pi*r^{2}\)</span> equation block: <span class="math display">\[E = mc^{2}\]</span> &gt; block quote # Header1 {#anchor} ## Header2 {#css_id} ### Header3 {.css_class} #### Header4 ##### Header5 ###### Header6 <!--Text comment-->  <em>HTML ignored in pdfs</em> <a href="http://www.rstudio.com" class="uri">http://www.rstudio.com</a> <a href="www.rstudio.com">link</a> Jump to <a href="#anchor">Header1</a> image: <img src="smallorb.png" alt="Caption" /></p>
+<ul>
+<li>unordered list</li>
+<li>sub-item 1</li>
+<li>sub-item 2
+<ul>
+<li>sub-sub-item 1</li>
+</ul></li>
+<li>item 2 Continued (indent 4 spaces)</li>
+</ul>
+<ol style="list-style-type: decimal">
+<li>ordered list</li>
+<li>item 2</li>
+</ol>
+<ol style="list-style-type: lower-roman">
+<li>sub-item 1 A. sub-sub-item 1</li>
+</ol>
+<ol class="example" style="list-style-type: decimal">
+<li>A list whose numbering continues after</li>
+<li>an interuption</li>
+</ol>
+<dl>
+<dt>Term 1</dt>
+<dd>Definition 1
+</dd>
+</dl>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Right</th>
+<th align="left">Left</th>
+<th>Default</th>
+<th align="center">Center</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">12</td>
+<td align="left">12</td>
+<td>12</td>
+<td align="center">12</td>
+</tr>
+<tr class="even">
+<td align="right">123</td>
+<td align="left">123</td>
+<td>123</td>
+<td align="center">123</td>
+</tr>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">1</td>
+<td>1</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>slide bullet 1</li>
+<li>slide bullet 2</li>
+</ul>
+<p>(&gt;- to have bullets appear on click)</p>
+<p>horizontal rule/slide break:</p>
+<hr />
+<p>A footnote <a href="#fn1" class="footnoteRef" id="fnref1"><sup>1</sup></a></p>
+<div class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Here is the footnote.<a href="#fnref1">↩</a></p></li>
+</ol>
+</div>

@@ -27,9 +27,9 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
 [author]
   name = "Ronald V Brown"
-  # bio = "Data Analyst"
+  bio = "I work as Data Analyst at supplyFORCE. All opinions and views are my own and do not represent my employer"
   job = "Data Analyst"
-  location = "Pennsylvania, USA"
+  location = "Pennsylvania"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   # gravatarEmail = ""
   # Your profile picture
@@ -153,7 +153,8 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   
   
   # Your blog cover picture.
-  coverImage = "cover-v1.2.0.jpg"
+  #coverImage = "cover-v1.2.0.jpg"
+  coverImage = "https://best-wallpaper.net/wallpaper/1920x1200/1609/Beautiful-dawn-scenery-trees-lake-mist-sunrise-blurry_1920x1200.jpg"
   
   # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
   imageGallery = true
