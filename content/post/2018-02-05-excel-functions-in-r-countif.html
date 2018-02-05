@@ -1,5 +1,32 @@
-<!-- BLOGDOWN-HEAD -->
-<!-- /BLOGDOWN-HEAD -->
+---
+title: 'Excel Functions in R : COUNTIF'
+author: Ron Brown
+date: '2018-02-05'
+slug: excel-functions-in-r-countif
+draft: TRUE
+categories:
+  - how to
+tags:
+  - Excel
+  - r
+  - COUNTIF
+---
 
 
 
+<div id="excel-syntax" class="section level2">
+<h2>Excel Syntax:</h2>
+<p><code>COUNTIF(range, criteria)</code></p>
+</div>
+<div id="r-equivalent" class="section level2">
+<h2>R Equivalent:</h2>
+<pre><code>library(dplyr)
+
+DataFrame$count &lt;- split(DataFrame, DataFrame[&quot;range&quot;]) %&gt;% 
+ lapply(nrow) %&gt;%
+ unsplit(DataFrame[&quot;range&quot;])</code></pre>
+</div>
+<div id="references" class="section level2">
+<h2>References:</h2>
+<p><a href="https://support.office.com/en-us/article/COUNTIF-function-e0de10c6-f885-4e71-abb4-1f464816df34" class="uri">https://support.office.com/en-us/article/COUNTIF-function-e0de10c6-f885-4e71-abb4-1f464816df34</a> <a href="http://stackoverflow.com/questions/7450600/count-number-of-observations-rows-per-group-and-add-result-to-data-frame" class="uri">http://stackoverflow.com/questions/7450600/count-number-of-observations-rows-per-group-and-add-result-to-data-frame</a></p>
+</div>
