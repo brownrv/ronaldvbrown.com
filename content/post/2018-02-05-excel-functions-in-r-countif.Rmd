@@ -1,0 +1,35 @@
+---
+title: 'Excel Functions in R : COUNTIF'
+author: Ron Brown
+date: '2018-02-05'
+slug: excel-functions-in-r-countif
+draft: TRUE
+categories:
+  - how to
+tags:
+  - Excel
+  - r
+  - COUNTIF
+---
+
+
+
+## Excel Syntax:
+
+`COUNTIF(range, criteria)`
+
+
+## R Equivalent:
+
+```
+library(dplyr)
+
+DataFrame$count <- split(DataFrame, DataFrame["range"]) %>% 
+ lapply(nrow) %>%
+ unsplit(DataFrame["range"])
+```
+
+
+## References:
+<https://support.office.com/en-us/article/COUNTIF-function-e0de10c6-f885-4e71-abb4-1f464816df34>
+<http://stackoverflow.com/questions/7450600/count-number-of-observations-rows-per-group-and-add-result-to-data-frame>
