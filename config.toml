@@ -227,14 +227,14 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
   
   
-[mediaTypes]
-[mediaTypes."application/atom+xml"]
-suffix = ["xml"]
+# [mediaTypes]
+# [mediaTypes."application/atom+xml"]
+# suffix = ["xml"]
 
-[outputFormats.Atom]
-mediaType = "application/atom+xml"
-baseName = "index"
-isPlainText = false
+# [outputFormats.Atom]
+# mediaType = "application/atom+xml"
+# baseName = "index"
+# isPlainText = false
     
-[outputs]
-home = [ "HTML", "Atom" ]
+# [outputs]
+# home = [ "HTML", "Atom" ]
