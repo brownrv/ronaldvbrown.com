@@ -228,11 +228,11 @@ ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
   
   
 [mediaTypes]
-[mediaTypes."application/atom"]
-suffix = "xml"
+[mediaTypes."application/atom+xml"]
+suffix = ["xml"]
 
 [outputFormats.Atom]
-mediaType = "application/atom"
+mediaType = "application/atom+xml"
 baseName = "index"
 isPlainText = false
     
